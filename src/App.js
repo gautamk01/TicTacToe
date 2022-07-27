@@ -3,7 +3,7 @@ import Board from "./Component/board/Board";
 function App() {
   return (
     <div>
-      <h1>TicTacToe</h1>
+      <h1 className="heading">TicTacToe</h1>
       <Board />
     </div>
   );
