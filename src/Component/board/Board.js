@@ -2,7 +2,7 @@ import { useState } from "react";
 import Square from "./square";
 
 function Board() {
-  const [arr, setarr] = useState(new Array(9).fill());
+  const [arr, setarr] = useState(new Array(9).fill(null));
   const [isnext, setIsnext] = useState(false);
 
   const squareBox = (position) => {
@@ -10,15 +10,15 @@ function Board() {
       <Square
         value={arr[position]}
         click={() => {
-          setIsnext(!isnext);
           setarr(
             arr.map((item, pos) => {
-              if (pos === position) {
+              if (pos === position && item === null) {
                 return isnext ? "O" : "X";
               }
               return item;
             })
           );
+          setIsnext(!isnext);
         }}
       />
     );
