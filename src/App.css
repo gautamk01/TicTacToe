@@ -14,6 +14,20 @@
   background-color: white;
   cursor: pointer;
 }
+/* ===============Fixing the border======================= */
+.columnBox:first-child .btn {
+  border-top: none;
+}
+.columnBox:last-child .btn {
+  border-bottom: none;
+}
+.btn:first-child {
+  border-left: none;
+}
+
+.btn:last-child {
+  border-right: none;
+}
 
 .btn:hover {
   background-color: rgb(180, 179, 179);
