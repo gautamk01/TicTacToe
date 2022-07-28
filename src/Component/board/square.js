@@ -10,11 +10,11 @@ export default function Square(props) {
           {props.value === "O" && <BsFillRecordCircleFill />}
         </p>
       ) : (
-        <h1>
+        <h2>
           {" "}
           {props.value === "X" && <ImCross />}
           {props.value === "O" && <BsFillRecordCircleFill />}
-        </h1>
+        </h2>
       )}
     </div>
   );

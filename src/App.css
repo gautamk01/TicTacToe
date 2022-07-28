@@ -1,4 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Edu+VIC+WA+NT+Beginner&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Edu+VIC+WA+NT+Beginner&family=Monoton&display=swap");
+body {
+  background-color: rgba(153, 77, 225, 0.758);
+  font-family: "Monoton", cursive;
+}
+
 .heading {
   font-size: 3.1rem;
   margin: 3rem;
@@ -12,7 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white;
+  background-color: rgb(148, 75, 217);
   cursor: pointer;
 }
 /* ===============Fixing the border======================= */
@@ -31,14 +36,16 @@
 }
 
 .btn:hover {
-  background-color: rgb(180, 179, 179);
+  background-color: rgba(204, 108, 241, 0.624);
 }
 
+/* ===============This effect for each column======================  */
 .columnBox {
   display: flex;
   flex-direction: row;
 }
 
+/* =======================Main Game Box Css==================== */
 .MainGameBox {
   height: fit-content;
   width: 100%;
@@ -46,13 +53,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.mainKey__ligher {
-  font-weight: lighter;
-}
-.mainKey__bolder {
-  font-weight: bolder;
 }
 
 .newGame__btn {
@@ -63,4 +63,8 @@
 .result__Box {
   margin: 1rem;
   font-family: "DM Sans", sans-serif;
+}
+
+.btn h2 {
+  color: orange;
 }
