@@ -78,7 +78,7 @@ function Board() {
 
   return (
     <div>
-      <h1>{result}</h1>
+      <h2 className="result__Box">{result}</h2>
       <div className="MainGameBox">
         <div className="columnBox">
           {squareBox(0)}
