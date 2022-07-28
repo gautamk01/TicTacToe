@@ -46,3 +46,12 @@
   align-items: center;
   justify-content: center;
 }
+
+.mainKey {
+  font-weight: bold;
+}
+
+.newGame__btn {
+  margin: 2rem;
+  padding: 2rem;
+}

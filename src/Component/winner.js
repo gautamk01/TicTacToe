@@ -17,13 +17,13 @@ function WinnerFinder(Checkarray) {
       String(Checkarray[b]) === "X" &&
       String(Checkarray[c]) === "X"
     ) {
-      return Checkarray[a];
+      return [a, b, c];
     } else if (
       String(Checkarray[a]) === "O" &&
       String(Checkarray[b]) === "O" &&
       String(Checkarray[c]) === "O"
     ) {
-      return Checkarray[a];
+      return [a, b, c];
     }
   }
 }

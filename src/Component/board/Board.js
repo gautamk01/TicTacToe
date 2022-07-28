@@ -8,16 +8,26 @@ function Board() {
   const [isnext, setIsnext] = useState(false);
   const [result, setresult] = useState("");
   const [findWinner, SetfindWinner] = useState(false);
+  const [count, setcount] = useState(0);
+  const NewGame = () => {
+    setarr(
+      arr.map((item) => {
+        return null;
+      })
+    );
+    setcount(0);
+    SetfindWinner(false);
+  };
   useEffect(() => {
     if (WinnerFinder(arr)) {
-      setresult(`${WinnerFinder(arr)} is the Winner 👑`);
+      setresult(`${arr[WinnerFinder(arr)[1]]} is the Winner 👑`);
       SetfindWinner(true);
+    } else if (count === 9 && !WinnerFinder(arr)) {
+      setresult(`X and O is tied`);
     } else {
-      isnext
-        ? setresult("This Chance is for O")
-        : setresult("This chance is for X");
+      isnext ? setresult("Next Player is O") : setresult("Next Player is X");
     }
-  });
+  }, [arr, count, isnext]);
 
   const changexo = (position) => {
     if (arr[position] != null) {
@@ -26,6 +36,7 @@ function Board() {
     setarr(
       arr.map((item, pos) => {
         if (pos === position && item === null && findWinner === false) {
+          setcount(count + 1);
           return isnext ? "O" : "X";
         }
         return item;
@@ -65,6 +76,9 @@ function Board() {
           {squareBox(8)}
         </div>
       </div>
+      <button type="button" onClick={NewGame} className="newGame__btn">
+        Start New Game
+      </button>
     </div>
   );
 }
