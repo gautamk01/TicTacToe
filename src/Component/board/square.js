@@ -1,9 +1,21 @@
 import React from "react";
+import { ImCross } from "react-icons/im";
+import { BsFillRecordCircleFill } from "react-icons/bs";
 export default function Square(props) {
-  console.log(props.bolder);
   return (
     <div className="btn" onClick={props.click}>
-      {props.bolder ? <p>{props.value}</p> : <h1>{props.value}</h1>}
+      {props.bolder ? (
+        <p>
+          {props.value === "X" && <ImCross />}
+          {props.value === "O" && <BsFillRecordCircleFill />}
+        </p>
+      ) : (
+        <h1>
+          {" "}
+          {props.value === "X" && <ImCross />}
+          {props.value === "O" && <BsFillRecordCircleFill />}
+        </h1>
+      )}
     </div>
   );
 }

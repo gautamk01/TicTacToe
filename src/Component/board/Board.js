@@ -38,6 +38,7 @@ function Board() {
     setcount(0);
     SetfindWinner(false);
     setIsnext(false);
+    setselected([]);
   };
 
   const changexo = (position) => {
