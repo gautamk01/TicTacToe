@@ -47,8 +47,11 @@
   justify-content: center;
 }
 
-.mainKey {
-  font-weight: bold;
+.mainKey__ligher {
+  font-weight: lighter;
+}
+.mainKey__bolder {
+  font-weight: bolder;
 }
 
 .newGame__btn {
